@@ -18,7 +18,7 @@ httpClient= inject(HttpClient)
   };
 
   edit(id:number, item:Feedback){
-    return this.httpClient.put("http://localhost:5062/api/Feedback/Update/${id}", item)
+    return this.httpClient.put(`http://localhost:5062/api/Feedback/Update/${id}`, item)
   };
 
   delete(id:number){
