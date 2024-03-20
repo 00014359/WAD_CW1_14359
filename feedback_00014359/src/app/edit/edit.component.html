@@ -1,0 +1,41 @@
+<div class="details">
+    <form class="feedback">
+      <div class="flex">
+        <mat-form-field class="w-full">
+          <mat-label>feedbackContent</mat-label>
+          <input
+            matInput
+            name="feedbackContent"
+            type="text"
+            [(ngModel)]="editFeedback.feedbackContent"
+          />
+        </mat-form-field>
+      </div>
+      <div class="flex">
+        <mat-form-field class="w-full">
+            <mat-label>feedbackDate</mat-label>
+            <input
+              matInput
+              name="feedbackDate"
+              type="text"
+              [(ngModel)]="editFeedback.feedbackDate"
+            />
+          </mat-form-field>      
+      </div>
+      <div class="flex">
+        <mat-form-field class="w-full">
+          <mat-label>Choose User</mat-label>
+          <mat-select [(ngModel)]="cID" [(value)]="selected" name="User">
+            @for(c of categoryObject; track c){
+            <mat-option [value]="c.userId">{{ c.username }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="flex justify-center">
+        <button mat-raised-button color="primary" (click)="edit()">
+          Edit
+        </button>
+      </div>
+    </form>
+  </div>

@@ -29,7 +29,7 @@ namespace WAD_cw1_14359.Models
                 _feedbackContent = value;
             }
         }
-        public DateTime FeedbackDate { get; set; }
+        public string FeedbackDate { get; set; }
 
         // Navigation property
         public User? User { get; set; }
